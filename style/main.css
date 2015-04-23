@@ -1,0 +1,22 @@
+#resultat_actif{
+    width: 88%;
+    text-align: right;
+}
+#plus{
+    height: 41px;
+}
+#moins{
+    width: 100%;
+}
+#egale{
+    height: 42px;
+}
+#zero{
+    width: 100%;
+}
+#point{
+    width: 100%;
+}
+#C_button{
+    width: 92%;
+}

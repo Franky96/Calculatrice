@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Calculateur</title>
+    <link rel="stylesheet" type="text/css" href="style/main.css"/>
+</head>
+<body>
+    <div id="wrapper">
+        <table>
+            <tr>
+                <td colspan="4"><input id="resultat_actif" type="text" value=""/></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td><input id="C_button" type="button" value="C" onclick="C_effacer()"/></td>
+                <td><input type="button" value="÷" onclick="appeler_operation('÷')"/></td>
+                <td><input type="button" value="x" onclick="appeler_operation('x')"/></td>
+                <td><input id="moins" type="button" value="-" onclick="appeler_operation('-')"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="ecrire_nb('7')"/></td>
+                <td><input type="button" value="8" onclick="ecrire_nb('8')"/></td>
+                <td><input type="button" value="9" onclick="ecrire_nb('9')"/></td>
+                <td rowspan="2"><input id="plus" type="button" value="+" onclick="appeler_operation('+')"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="ecrire_nb('4')"/></td>
+                <td><input type="button" value="5" onclick="ecrire_nb('5')"/></td>
+                <td><input type="button" value="6" onclick="ecrire_nb('6')"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="ecrire_nb('1')"/></td>
+                <td><input type="button" value="2" onclick="ecrire_nb('2')"/></td>
+                <td><input type="button" value="3" onclick="ecrire_nb('3')"/></td>
+                <td rowspan="2"><input id="egale" type="button" value="=" onclick="operation()"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="zero" type="button" value="0" onclick="ecrire_nb('0')"/></td>
+                <td><input id="point" type="button" value="." onclick="ecrire_nb('.')"/></td>
+            </tr>
+        </table>
+    </div>
+<script src="script/biblio/numeros.js"></script>
+<script src="script/biblio/equation.js"></script>
+<script src="script/main.js"></script>
+</body>
+</html>
