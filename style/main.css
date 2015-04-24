@@ -1,22 +1,28 @@
+td{
+    padding: 0;
+    width: 25px;
+}
 #resultat_actif{
-    width: 88%;
     text-align: right;
-}
-#plus{
-    height: 41px;
-}
-#moins{
+    padding: 0;
     width: 100%;
 }
-#egale{
-    height: 42px;
-}
-#zero{
-    width: 100%;
-}
-#point{
-    width: 100%;
+#CE_button{
+    padding: 0 1px 0 0;
 }
 #C_button{
-    width: 92%;
+    padding: 0 5px 0 5px;
+}
+#point{
+    padding: 0 8px 0 8px;
+}
+#moins{
+    padding: 0px 7px 0 8px;
+}
+#fois{
+    padding: 0 7px 0 6px;
+}
+#egale{
+    padding: 10px 6px 11px 6px;
+    margin-top: 1px;
 }

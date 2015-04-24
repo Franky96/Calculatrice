@@ -92,6 +92,15 @@ function ecrire_nb(e){
                 point();
             }
             break;
+        case '±':
+            if(apres_operation == true){
+                CE_effacer();
+                plus_moins();
+                apres_operation = false
+            }else{
+                plus_moins();
+            }
+            break;
         case '0':
             if(apres_operation == true){
                 CE_effacer();
@@ -133,6 +142,23 @@ function neuf(){
 }
 function point(){
     document.getElementById('resultat_actif').value += '.';
+}
+function plus_moins(){
+    var a;
+    a = document.getElementById('resultat_actif').value;
+    a = parseFloat(a);
+    if(a > 0){
+        console.log("test");
+        var caractere = "-";
+        var chiffre;
+        chiffre = caractere.concat(a);
+       // document.getElementById('resultat_actif').value = chiffre;
+    }
+
+    if(a.charAt(0)== "-") {
+        console.log("neg");
+        a.replace("-","");
+    }
 }
 function zero(){
     document.getElementById('resultat_actif').value += '0';
