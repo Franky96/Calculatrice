@@ -179,11 +179,3 @@ function C_effacer(){
 
 
 
-
-
-
-
-
-
-
-

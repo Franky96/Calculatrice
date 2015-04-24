@@ -11,10 +11,10 @@ td{
     padding: 0 1px 0 0;
 }
 #C_button{
-    padding: 0 5px 0 5px;
+    padding: 0 5px;
 }
 #point{
-    padding: 0 8px 0 8px;
+    padding: 0 8px;
 }
 #moins{
     padding: 0 7px 0 8px;
@@ -25,4 +25,16 @@ td{
 #egale{
     padding: 10px 6px 11px 6px;
     margin-top: 1px;
+}
+#parentese_f{
+    padding: 0 7px 1px 7px;
+}
+#x_carre_y{
+    padding: 0 1px 0 2px;
+}
+#racine_cube{
+    padding: 0 4px;
+}
+#factoriel{
+    padding: 0 4px;
 }

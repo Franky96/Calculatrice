@@ -32,7 +32,6 @@ function appeler_operation(operateur){
             break;
     }
 }
-
 function operation() {
     if(operant != "") {
         operand_2 = document.getElementById('resultat_actif').value;
