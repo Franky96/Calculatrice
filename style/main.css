@@ -22,19 +22,44 @@ td{
 #fois{
     padding: 0 7px 0 6px;
 }
+#divise{
+    padding: 0 8px;
+}
 #egale{
     padding: 10px 6px 11px 6px;
     margin-top: 1px;
 }
-#parentese_f{
-    padding: 0 7px 1px 7px;
+#log{
+    padding: 2px 4px 3px 3px;
+    margin-bottom: 2px;
+    font-size: 55%;
+}
+#r_log{
+
+    padding: 2px 4px 3px 3px;
+    margin-bottom: 2px;
+    font-size: 55%;
+}
+#x_r_carre_y{
+    padding: 0 1px;
 }
 #x_carre_y{
-    padding: 0 1px 0 2px;
+    padding: 0 4px;
 }
 #racine_cube{
-    padding: 0 4px;
+    padding: 0 3px 0 4px;
 }
 #factoriel{
     padding: 0 4px;
+}
+#carre{
+    padding: 0 4px 0 5px;
+}
+#cube{
+    padding: 0 4px 0 5px;
+}
+#angle_deg{
+    padding: 2px 0 3px 1px;
+    margin-bottom: 2px;
+    font-size: 55%;
 }

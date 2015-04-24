@@ -101,6 +101,30 @@ function ecrire_nb(e){
                 apres_operation = true;
             }
             break;
+        case 'n!':
+            if(apres_operation == true){
+                factoriel();
+                apres_operation = false;
+            }else{
+                factoriel();
+            }
+            break;
+        case 'r_carre':
+            if(apres_operation == true){
+                racine_carre();
+                apres_operation = false;
+            }else{
+                racine_carre();
+            }
+            break;
+        case 'r_cube':
+            if(apres_operation == true){
+                racine_cubique();
+                apres_operation = false;
+            }else{
+                racine_cubique();
+            }
+            break;
         case '0':
             if(apres_operation == true){
                 CE_effacer();
@@ -161,6 +185,41 @@ function plus_moins(){
 function zero(){
     document.getElementById('resultat_actif').value += '0';
 }
+
+function factoriel(){
+    var a = document.getElementById('resultat_actif').value;
+    a = parseFloat(a);
+    var result = 1;
+    for (var i = a; i > 0; i--){
+        result = result * i;
+        console.log(i);
+    }
+    document.getElementById('resultat_actif').value = result;
+}
+function racine_carre(){
+    var a = document.getElementById('resultat_actif').value;
+    a = parseFloat(a);
+    var result;
+    result = Math.sqrt(a);
+    document.getElementById('resultat_actif').value = result;
+}
+function racine_cubique(){
+    var a = document.getElementById('resultat_actif').value;
+    a = parseFloat(a);
+    var result;
+    result = Math.pow(a, 1/3);
+    result = Math.ceil(result);
+    document.getElementById('resultat_actif').value = result;
+}
+function carre(){
+    var a = document.getElementById('resultat_actif').value;
+    a = parseFloat(a);
+    var result;
+
+
+    document.getElementById('resultat_actif').value = result;
+}
+
 function CE_effacer(){
     document.getElementById('resultat_actif').value = "";
 }
@@ -170,8 +229,12 @@ function C_effacer(){
     operand_2 = 0;
     operand_3 = 0;
     operant = "";
+    apres_operation = false;
     resultat = 0;
     re_operation = 0;
+    re_appeler_operation = 0;
+    tab = [];
+    deja_operer = 0;
 }
 
 

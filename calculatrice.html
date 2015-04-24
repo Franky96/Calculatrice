@@ -10,40 +10,45 @@
         <table>
             <tbody>
                 <tr>
-                    <td colspan="5"><input id="resultat_actif" type="text" value=""/></td>
+                    <td colspan="6"><input id="resultat_actif" type="text" value=""/></td>
                 </tr>
                 </tbody>
             <tbody>
                 <tr>
-                    <td><input id="parentese_f" type="button" value=")" onclick="ecrire_nb(')')"/></td>
+                    <td><input id="angle_deg" type="button" value="DEG" onclick="ecrire_nb('')"/></td>
+                    <td><input id="factoriel" type="button" value="n!" onclick="ecrire_nb('n!')"/></td>
                     <td><input class="efface" id="CE_button" type="button" value="CE" onclick="CE_effacer()"/></td>
                     <td><input class="efface" id="C_button" type="button" value="C" onclick="C_effacer()"/></td>
-                    <td><input type="button" value="÷" onclick="appeler_operation('÷')"/></td>
+                    <td><input id="divise" type="button" value="/" onclick="appeler_operation('/')"/></td>
                     <td><input id="fois" type="button" value="x" onclick="appeler_operation('x')"/></td>
                 </tr>
                 <tr>
-                    <td><input id="factoriel" type="button" value="n!" onclick="ecrire_nb('n!')"/></td>
+                    <td><input id="r_log" type="button" value="10˟" onclick="ecrire_nb('reverse_log')"/></td>
+                    <td><input id="log" type="button" value="log" onclick="ecrire_nb('log')"/></td>
                     <td><input type="button" value="7" onclick="ecrire_nb('7')"/></td>
                     <td><input type="button" value="8" onclick="ecrire_nb('8')"/></td>
                     <td><input type="button" value="9" onclick="ecrire_nb('9')"/></td>
                     <td><input id="moins" type="button" value="-" onclick="appeler_operation('-')"/></td>
                 </tr>
                 <tr>
-                    <td><input id="racine" type="button" value="√" onclick="ecrire_nb('carre')"/></td>
+                    <td><input id="carre" type="button" value="x²" onclick="ecrire_nb('carre')"/></td>
+                    <td><input id="racine" type="button" value="√" onclick="ecrire_nb('r_carre')"/></td>
                     <td><input type="button" value="4" onclick="ecrire_nb('4')"/></td>
                     <td><input type="button" value="5" onclick="ecrire_nb('5')"/></td>
                     <td><input type="button" value="6" onclick="ecrire_nb('6')"/></td>
                     <td><input id="plus" type="button" value="+" onclick="appeler_operation('+')"/></td>
                 </tr>
                 <tr>
-                    <td><input id="racine_cube" type="button" value="³√" onclick="ecrire_nb('cube')"/></td>
+                    <td><input id="cube" type="button" value="x³" onclick="ecrire_nb('cube')"/></td>
+                    <td><input id="racine_cube" type="button" value="³√" onclick="ecrire_nb('r_cube')"/></td>
                     <td><input type="button" value="1" onclick="ecrire_nb('1')"/></td>
                     <td><input type="button" value="2" onclick="ecrire_nb('2')"/></td>
                     <td><input type="button" value="3" onclick="ecrire_nb('3')"/></td>
                     <td rowspan="2"><input id="egale" type="button" value="=" onclick="operation()"/></td>
                 </tr>
                 <tr>
-                    <td><input id="x_carre_y" type="button" value="˟√ʸ" onclick="ecrire_nb('x_carre_y')"/></td>
+                    <td><input id="x_carre_y" type="button" value="˟y" onclick="appeler_operation('x_carre_y')"/></td>
+                    <td><input id="x_r_carre_y" type="button" value="˟√ʸ" onclick="appeler_operation('x_r_carre_y')"/></td>
                     <td><input id="plus_ou_moins" type="button" value="±" onclick="ecrire_nb('±')"/></td>
                     <td><input id="zero" type="button" value="0" onclick="ecrire_nb('0')"/></td>
                     <td><input id="point" type="button" value="." onclick="ecrire_nb('.')"/></td>

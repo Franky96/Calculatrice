@@ -31,3 +31,10 @@ function divise(a, b){
         return result;
 }
 
+function x_racine_y(a, b){
+    a = parseFloat(a);
+    var result;
+    result = Math.pow(a, 1/b);
+    result = Math.ceil(result);
+    return result;
+}
