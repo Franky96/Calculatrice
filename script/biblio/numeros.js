@@ -6,7 +6,7 @@ function ecrire_nb(e){
             if(apres_operation == true){
                 CE_effacer();
                 un();
-                apres_operation = false
+                apres_operation = false;
             }else{
                 un();
             }
@@ -15,7 +15,7 @@ function ecrire_nb(e){
             if(apres_operation == true){
                 CE_effacer();
                 deux();
-                apres_operation = false
+                apres_operation = false;
             }else{
                 deux();
             }
@@ -24,7 +24,7 @@ function ecrire_nb(e){
             if(apres_operation == true){
                 CE_effacer();
                 trois();
-                apres_operation = false
+                apres_operation = false;
             }else{
                 trois();
             }
@@ -33,7 +33,7 @@ function ecrire_nb(e){
             if(apres_operation == true){
                 CE_effacer();
                 quatre();
-                apres_operation = false
+                apres_operation = false;
             }else{
                 quatre();
             }
@@ -42,7 +42,7 @@ function ecrire_nb(e){
             if(apres_operation == true){
                 CE_effacer();
                 cinq();
-                apres_operation = false
+                apres_operation = false;
             }else{
                 cinq();
             }
@@ -51,7 +51,7 @@ function ecrire_nb(e){
             if(apres_operation == true){
                 CE_effacer();
                 six();
-                apres_operation = false
+                apres_operation = false;
             }else{
                 six();
             }
@@ -60,7 +60,7 @@ function ecrire_nb(e){
             if(apres_operation == true){
                 CE_effacer();
                 sept();
-                apres_operation = false
+                apres_operation = false;
             }else{
                 sept();
             }
@@ -69,7 +69,7 @@ function ecrire_nb(e){
             if(apres_operation == true){
                 CE_effacer();
                 huit();
-                apres_operation = false
+                apres_operation = false;
             }else{
                 huit();
             }
@@ -78,7 +78,7 @@ function ecrire_nb(e){
             if(apres_operation == true){
                 CE_effacer();
                 neuf();
-                apres_operation = false
+                apres_operation = false;
             }else{
                 neuf();
             }
@@ -87,25 +87,25 @@ function ecrire_nb(e){
             if(apres_operation == true){
                 CE_effacer();
                 point();
-                apres_operation = false
+                apres_operation = false;
             }else{
                 point();
             }
             break;
         case '±':
             if(apres_operation == true){
-                CE_effacer();
                 plus_moins();
-                apres_operation = false
-            }else{
+                apres_operation = false;
+            }else {
                 plus_moins();
+                apres_operation = true;
             }
             break;
         case '0':
             if(apres_operation == true){
                 CE_effacer();
                 zero();
-                apres_operation = false
+                apres_operation = false;
             }else{
                 zero();
             }
@@ -146,19 +146,17 @@ function point(){
 function plus_moins(){
     var a;
     a = document.getElementById('resultat_actif').value;
-    a = parseFloat(a);
-    if(a > 0){
-        console.log("test");
-        var caractere = "-";
-        var chiffre;
+    var caractere;
+    caractere = "-";
+    var chiffre;
+    if(a.charAt(0) != "-"){
         chiffre = caractere.concat(a);
-       // document.getElementById('resultat_actif').value = chiffre;
+        document.getElementById('resultat_actif').value = chiffre;
     }
-
-    if(a.charAt(0)== "-") {
-        console.log("neg");
-        a.replace("-","");
+    if(a.charAt(0) == "-"){
+        chiffre = a.replace(/-/g,"");
     }
+       document.getElementById('resultat_actif').value = chiffre;
 }
 function zero(){
     document.getElementById('resultat_actif').value += '0';
