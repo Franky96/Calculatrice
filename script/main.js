@@ -26,7 +26,7 @@ function appeler_operation(operateur){
             operant = operateur;
             CE_effacer();
             break;
-        case '÷':
+        case '/':
             operant = operateur;
             CE_effacer();
             break;
@@ -68,7 +68,7 @@ function operation() {
                     resultat = fois(resultat, operand_3);
                 }
                 break;
-            case '÷':
+            case '/':
                 if (re_operation == 0) {
                     resultat = divise(operand_1, operand_2);
                     operand_3 = parseFloat(operand_2);

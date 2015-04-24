@@ -15,7 +15,7 @@ document.addEventListener("keydown",function(ev) {
     if(ev.keyCode==103)    {ecrire_nb('7');}
     if(ev.keyCode==104)    {ecrire_nb('8');}
     if(ev.keyCode==105)    {ecrire_nb('9');}
-    if(ev.keyCode==111)    {appeler_operation('÷');}
+    if(ev.keyCode==111)    {appeler_operation('/');}
     if(ev.keyCode==109)    {appeler_operation('-');}
     if(ev.keyCode==107)    {appeler_operation('+');}
     if(ev.keyCode==106)    {appeler_operation('x');}
