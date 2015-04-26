@@ -88,6 +88,8 @@ function appeler_operation(operateur){
                 CE_effacer();
                 deja_operer = 5;
             }
+            operant = operateur;
+            CE_effacer();
             break;
     }
 }
@@ -107,7 +109,7 @@ function operation() {
                     re_appeler_operation = 0;
                 } else {
                     resultat = plus(resultat, operand_3);
-                    if (re_appeler_operation == 0);
+                    re_appeler_operation = 0;
                 }
                 break;
             case '-':
