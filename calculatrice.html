@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -10,12 +11,12 @@
         <table>
             <tbody>
                 <tr>
-                    <td colspan="6"><input id="resultat_actif" type="text" value=""/></td>
+                    <td colspan="6"><label for="resultat_actif"></label><input id="resultat_actif" type="text" value=""/></td>
                 </tr>
                 </tbody>
             <tbody>
                 <tr>
-                    <td><input id="angle_deg" type="button" value="DEG" onclick="ecrire_nb('')"/></td>
+                    <td><input id="e" type="button" value="e" onclick="ecrire_nb('e')"/></td>
                     <td><input id="factoriel" type="button" value="n!" onclick="ecrire_nb('n!')"/></td>
                     <td><input class="efface" id="CE_button" type="button" value="CE" onclick="CE_effacer()"/></td>
                     <td><input class="efface" id="C_button" type="button" value="C" onclick="C_effacer()"/></td>
@@ -58,8 +59,73 @@
     </div>
 <script src="script/biblio/numeros.js"></script>
 <script src="script/biblio/equation.js"></script>
+<script src="script/biblio/RaccourciClavier.js"></script>
 <script src="script/main.js"></script>
-<script src="script/RaccourciClavier.js"></script>
+
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="style/main.css"/>
+</head>
+<body>
+<table>
+
+    <tr id="tr_up" class="up">
+        <td colspan="6" id="td_up"><span id="resultat_actif" value=""></span></td>
+    </tr>
+
+    <tr class="down">
+        <td id="e" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);"  onclick="ecrire_nb('e')">e</td>
+        <td id="factoriel" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="ecrire_nb('n!')">n!</td>
+        <td id="CE_button" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="CE_effacer()">CE</td>
+        <td id="C_button" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="C_effacer()">C</td>
+        <td id="divise" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="appeler_operation('/')">/</td>
+        <td id="fois" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="appeler_operation('x')">*</td>
+    </tr>
+    <tr class="down">
+        <td id="r_log" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="ecrire_nb('reverse_log')">10˟</td>
+        <td id="log" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="ecrire_nb('log')">log</td>
+        <td class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="ecrire_nb('7')">7</td>
+        <td class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="ecrire_nb('8')">8</td>
+        <td class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="ecrire_nb('9')">9</td>
+        <td class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="appeler_operation('-')">-</td>
+    </tr>
+    <tr class="down">
+        <td id="carre" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="ecrire_nb('carre')">x²</td>
+        <td id="racine" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="ecrire_nb('r_carre')">√</td>
+        <td class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);"  onclick="ecrire_nb('4')">4</td>
+        <td class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);"  onclick="ecrire_nb('5')">5</td>
+        <td class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);"  onclick="ecrire_nb('6')">6</td>
+        <td id="plus" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);"  onclick="appeler_operation('+')">+</td>
+    </tr>
+    <tr class="down">
+        <td id="cube" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="ecrire_nb('cube')">x³</td>
+        <td id="racine_cube" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="ecrire_nb('r_cube')">³√</td>
+        <td class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);"  onclick="ecrire_nb('1')">1</td>
+        <td class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);"  onclick="ecrire_nb('2')">2</td>
+        <td class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);"  onclick="ecrire_nb('3')">3</td>
+        <td  id="egale" rowspan="2" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="operation()">=</td>
+    </tr>
+    <tr class="down">
+        <td id="x_carre_y" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="appeler_operation('x_carre_y')">˟y</td>
+        <td id="x_r_carre_y"  class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="appeler_operation('x_r_carre_y')">˟√ʸ</td>
+        <td id="plus_ou_moins" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="ecrire_nb('±')">±</td>
+        <td id="zero" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="ecrire_nb('0')">0</td>
+        <td id="point" class="onmouseup" onmouseup="MouseOut(this);" onmousedown="MouseOver(this);" onclick="ecrire_nb('.')">,</td>
+    </tr>
+
+</table>
+
+<script src="script/biblio/numeros.js"></script>
+<script src="script/biblio/equation.js"></script>
+<script src="script/biblio/variables_globales.js"></script>
+<script src="script/biblio/RaccourciClavier.js"></script>
+<script src="script/main.js"></script>
 
 </body>
 </html>
