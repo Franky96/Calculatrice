@@ -7,8 +7,11 @@
 'use strict';
 /**
  * équation de base:
+ facile à concevoir et à utiliser
 */
 function plus(a, b){
+    a = parseFloat(a);
+    b = parseFloat(b);
     var result;
     result = a + b;
     return result
@@ -33,6 +36,11 @@ function divise(a, b){
     }
         return result;
 }
+function exposant(a, b){
+    var result;
+    result = Math.pow(a, b);
+    return result;
+}
 
 /**
  *Fonction/équations immédiate
@@ -41,19 +49,31 @@ function divise(a, b){
 function bouton_log(){
     var a = document.getElementById('resultat_actif').innerHTML;
     a = parseFloat(a);
-    var resultat;
-    resultat = Math.log(a)/Math.log(10);
+    var result;
+    result= Math.log(a)/Math.log(10);
     console.log(resultat);
-    //resultat = Math.ceil(resultat);
-    //console.log(resultat);
-    document.getElementById('resultat_actif').innerHTML = resultat;
+    //result = Math.ceil(result);
+    //console.log(result);
+    if(isNaN(result)){
+        document.getElementById('resultat_actif').innerHTML = 'Chiffre avant';
+        setTimeout(C_effacer, 800);
+    }
+    else{
+        document.getElementById('resultat_actif').innerHTML = result;
+    }
 }
 function reverse_log(){
     var a = document.getElementById('resultat_actif').innerHTML;
     a = parseFloat(a);
     var result;
     result = Math.pow(10, a);
-    document.getElementById('resultat_actif').innerHTML = result
+    if(isNaN(result)){
+        document.getElementById('resultat_actif').innerHTML = 'Chiffre avant';
+        setTimeout(C_effacer, 800);
+    }
+    else{
+        document.getElementById('resultat_actif').innerHTML = result;
+    }
 }
 function factoriel(){
     var a = document.getElementById('resultat_actif').innerHTML;
@@ -63,14 +83,35 @@ function factoriel(){
         result = result * i;
         console.log(i);
     }
-    document.getElementById('resultat_actif').innerHTML = result;
+    if(isNaN(result)){
+        document.getElementById('resultat_actif').innerHTML = 'erreur';
+        setTimeout(C_effacer, 800);
+    }
+    else if(document.getElementById('resultat_actif').innerHTML == ""){
+        document.getElementById('resultat_actif').innerHTML = '0! = ' + result;
+        setTimeout(function(){
+            C_effacer();
+            document.getElementById('resultat_actif').innerHTML = result;
+        }, 800);
+
+
+    }
+    else{
+        document.getElementById('resultat_actif').innerHTML = result;
+    }
 }
 function racine_carre(){
     var a = document.getElementById('resultat_actif').innerHTML;
     a = parseFloat(a);
     var result;
     result = Math.sqrt(a);
-    document.getElementById('resultat_actif').innerHTML = result;
+    if(isNaN(result)){
+        document.getElementById('resultat_actif').innerHTML = 'Chiffre avant';
+        setTimeout(C_effacer, 800);
+    }
+    else{
+        document.getElementById('resultat_actif').innerHTML = result;
+    }
 }
 function racine_cubique(){
     var a = document.getElementById('resultat_actif').innerHTML;
@@ -99,14 +140,14 @@ function carre(){
     a = parseFloat(a);
     var result;
     result = a * a;
-    document.getElementById('resultat_actif').innerHTML = result
+    document.getElementById('resultat_actif').innerHTML = result;
 }
 function cube(){
     var a = document.getElementById('resultat_actif').innerHTML;
     a = parseFloat(a);
     var result;
     result = a * a * a;
-    document.getElementById('resultat_actif').innerHTML = result
+    document.getElementById('resultat_actif').innerHTML = result;
 }
 
 /**

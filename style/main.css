@@ -72,13 +72,14 @@ table{
 }
 
 #td_up{
+    border: 1px solid green;
     padding-right: 10px;
     text-align: right;
     margin: 0;
 }
 td{
     position: relative;
-    border : 1px solid black;
+    border : 1px solid green;
     border-radius: 8px;
     width: 50px;
     height: 30px;
@@ -87,25 +88,29 @@ td{
     margin: 0;
 }
 .onmouseup:hover {
-    background-color: #01d0fd;
-    border : 1px solid black;
+    background-color: white;
+    color: green;
+    border : 1px solid red;
     width: 50px;height: 30px;
     font-weight: bold;
 }
 .onmousedown:hover{
-    background-color: brown;
-    border : 1px solid black;
+    background-color: white;
+    color: green;
+    border : 1px solid blue;
     width: 50px;height: 30px;
     font-weight: bold;
 }
 
 
 .up{
-    background-color: yellow;
+    background-color: lightgray;
+    color: black;
 }
 
 .down{
-    background-color: chartreuse;
+    background-color: #757575;
+    color: white;
 }
 
 ::selection { background: transparent; } ::-moz-selection { background: transparent; }

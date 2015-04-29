@@ -4,7 +4,6 @@
  * fonction qui agissent sur le document
  * @param operateur
  */
-
 function appeler_operation(operateur){
 
     operand_1 = document.getElementById('resultat_actif').innerHTML;
@@ -29,9 +28,15 @@ function appeler_operation(operateur){
                     }
                     deja_operer = 1;
                     resultat = result;
-                    document.getElementById('resultat_actif').innerHTML = resultat;
                     apres_operation = true;
                     operand_1 = resultat;
+                    if(isNaN(resultat)){
+                        document.getElementById('resultat_actif').innerHTML = 'erreur';
+                        setTimeout(C_effacer, 550);
+                    }
+                    else{
+                        document.getElementById('resultat_actif').innerHTML = resultat;
+                    }
                 }
             }
             break;
@@ -95,10 +100,17 @@ function appeler_operation(operateur){
             //if(deja_operer == 0 || deja_operer == 5) {
                 operant = operateur;
                 CE_effacer();
-                deja_operer = 5;
+                //deja_operer = 5;
             //}
             operant = operateur;
             CE_effacer();
+            break;
+        case 'exposant':
+            if(deja_operer == 0 || deja_operer == 6){
+                operant = operateur;
+                CE_effacer();
+                deja_operer = 6;
+            }
             break;
     }
 }
@@ -168,10 +180,23 @@ function operation() {
                     resultat = x_racine_y(resultat, operand_3);
                 }
                 break;
+            case 'exposant':
+                resultat = exposant(operand_1, operand_2);
+                operand_3 = parseFloat(operand_2);
+                re_operation++;
+                apres_operation = true;
 
-            }
+
+        }
+        if(isNaN(resultat)){
+            document.getElementById('resultat_actif').innerHTML = 'erreur';
+            setTimeout(C_effacer, 800);
+        }
+        else{
             document.getElementById('resultat_actif').innerHTML = resultat;
+        }
     }
+
 }
 function ecrire_nb(e){
     /**
@@ -322,5 +347,4 @@ function ecrire_nb(e){
             break;
     }
 }
-
 

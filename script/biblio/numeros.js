@@ -58,6 +58,7 @@ function zero(){
 }
 function e_num(){
     document.getElementById('resultat_actif').innerHTML += Math.E;
+    apres_operation = true;
 }
 
 /**
