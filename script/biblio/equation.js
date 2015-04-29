@@ -133,7 +133,13 @@ function racine_cubique(){
             }
         }
     }
-    document.getElementById('resultat_actif').innerHTML = result;
+    if(isNaN(result)){
+        document.getElementById('resultat_actif').innerHTML = 'Chiffre avant';
+        setTimeout(C_effacer, 800);
+    }
+    else{
+        document.getElementById('resultat_actif').innerHTML = result;
+    }
 }
 function carre(){
     var a = document.getElementById('resultat_actif').innerHTML;

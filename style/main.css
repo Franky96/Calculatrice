@@ -65,22 +65,36 @@ td{
     font-size: 55%;
 }
 */
+html{
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+body{
+    text-align: center;
+    width: auto;
+    height: auto;
+}
 table{
     border: 1px solid black;
-    padding: 10px 200px 10px 10px;
+    padding: 10px;
     border-radius: 20px;
+    width: 630px;
+    height: 760px;
+    font-size: 200%;
 }
 
 #td_up{
     border: 1px solid green;
     padding-right: 10px;
+    height: 37px;
     text-align: right;
     margin: 0;
 }
 td{
     position: relative;
     border : 1px solid green;
-    border-radius: 8px;
+    border-radius: 25px;
     width: 50px;
     height: 30px;
     text-align: center;
